@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/share/tsung/tsung-1.0.dtd">
+<tsung loglevel="notice" version="1.0">
+
+<clients>
+     <client host="masternode" maxusers="10000"/> 
+     <client host="slavenode1" maxusers="10000"/>
+     <client host="slavenode2" maxusers="10000"/>
+
+</clients>
+
+<servers>
+   <server host="put_hostname_of_the_site_you_want_to_test" port="80" type="tcp"></server>
+</servers>
+
+
+
+
+<load>
+<arrivalphase phase="1" duration="10" unit="minute">
+<users interarrival="0.01" unit="second"/>
+</arrivalphase>
+</load>
+
+
+<sessions>
+<session name="foo" probability="100" type="ts_http">
+
+
+<setdynvars sourcetype="random_number" start="1" end="1000">
+<var name="number" />
+</setdynvars> 
+
+
+
+
+<request subst="true">
+<http url="put_site_you_want_to_test?arg1=%%_number%%&amp;arg2=%%_number%%" version="1.1" method="GET"/>
+</request> 
+
+ 
+</session>
+</sessions>
+
+
+</tsung>
