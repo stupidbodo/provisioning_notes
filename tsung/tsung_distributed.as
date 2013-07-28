@@ -2,8 +2,8 @@
 
 # Make sure erlang and tsung is installed. Also prepare tsung.xml file to be placed under "/root/.tsung/" .
 
-# There's one master node(controller), in this case we will call it's hostname T1. 
-# There is also a group of slave nodes(remote), which we will call it's hostname T2/T3/T4 and so forth.
+# There is one master node(controller), in this case we will call the hostname T1. 
+# There is also a group of slave nodes(remote), which we will call the hostname T2/T3/T4 and so forth.
 
 
 
@@ -97,11 +97,11 @@ Super Fast Way to Deploy Tsung Cluster
 ##########################################################
 
 # Get a DigitalOcean account
-# Use the $5/month deal to create a master node with the standard settings. We need to keep the master node permanently (heck it's only 5 bucks, cheaper than a happy meal)
+# Use the $5/month deal to create a master node with the standard settings. We need to keep the master node permanently (heck it is only 5 bucks, cheaper than a happy meal)
 # Create a sample slave node with hostname directed to a standard master node ip, increase the open file limit and install the ssh key
 # Power off and save the sample slave node as a image so that we can reuse it next time
 # Next time when you need to deploy distributed tsung, just use the slave image to fire as many nodes as you wish. 
-# Only work is that we need to update master's /etc/hosts with slave nodes ip and run "ssh hostname erl" to each slave nodes so that it is verified as known host.
+# Only work is that we need to update the master /etc/hosts with slave nodes ip and run "ssh hostname erl" to each slave nodes so that it is verified as known host.
 
 
 
