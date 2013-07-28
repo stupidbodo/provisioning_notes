@@ -13,3 +13,8 @@ cd otp_src_R15B01
 
 
 
+# Install erlang
+wget http://www.erlang.org/download/otp_src_R16B01.tar.gz
+tar zxvf otp_src_R16B01.tar.gz
+cd otp_src_R16B01
+./configure && make && sudo make install

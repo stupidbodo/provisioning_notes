@@ -100,7 +100,8 @@ Super Fast Way to Deploy Tsung Cluster
 # Use the $5/month deal to create a master node with the standard settings. We need to keep the master node permanently (heck it's only 5 bucks, cheaper than a happy meal)
 # Create a sample slave node with hostname directed to a standard master node ip, increase the open file limit and install the ssh key
 # Power off and save the sample slave node as a image so that we can reuse it next time
-# Next time when you need to deploy distributed tsung, just use the slave image to fire as many nodes as you wish. Only work is that we need to update master's /etc/hosts with slave nodes ip
+# Next time when you need to deploy distributed tsung, just use the slave image to fire as many nodes as you wish. 
+# Only work is that we need to update master's /etc/hosts with slave nodes ip and run "ssh hostname erl" to each slave nodes so that it is verified as known host.
 
 
 
